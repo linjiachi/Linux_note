@@ -5,3 +5,7 @@
 * [W3-20200318](https://github.com/linjiachi/Linux_note/blob/109-2/W3-20200318.md)
 * [W4-20200325](https://github.com/linjiachi/Linux_note/blob/109-2/W4-20200325.md)
 * W5-20200401 : 春節放假。
+* [W6-20200408](https://github.com/linjiachi/Linux_note/blob/109-2/W6-20200408.md)
+* [W7-20200415](https://github.com/linjiachi/Linux_note/blob/109-2/W7-20200415.md)
+* W8-20200422
+* W9-20200429
