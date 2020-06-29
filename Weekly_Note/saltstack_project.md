@@ -87,9 +87,7 @@ auto_accept:True  	# 自動接受「minion」請求
 > 因為 Minion 預設是去找 salt 這個 name 的 Server
 * `gedit /etc/hosts`
 > 192.168.56.104 salt
-5. 啟動 Minion，類似 SSH 的 Key 交換機制
-* `salt-minion –l debug`
-6. 到 Master 端查看是否有連上
+5. 到 Master 端查看是否有連上
 * `salt-key –L`
     > 在Accepted Keys下看到master、minion、minion2 三台
 
