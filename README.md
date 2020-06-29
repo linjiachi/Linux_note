@@ -13,3 +13,5 @@
 * [W11-20200513](https://github.com/linjiachi/Linux_note/blob/109-2/Weekly_Note/W11-20200513.md) : 
 * [W12-20200520](https://github.com/linjiachi/Linux_note/blob/109-2/Weekly_Note/W12-20200520.md) : 
 * [W13-20200527](https://github.com/linjiachi/Linux_note/blob/109-2/Weekly_Note/W13-20200527.md) : 
+* []()
+* []()
