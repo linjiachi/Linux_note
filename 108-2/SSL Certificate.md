@@ -67,30 +67,23 @@ SSLCertificateKeyFile /etc/mySSL/ca.key
 ```sh
 [root@vm1 ~]# echo "hi" > hi.html
 ```
-* 到 Windows 本機 `C:\Windows\System32\drivers\etc` 裡修改 hosts 檔，手動指定ip 的方式加上 `192.168.56.101 www.nqutest.com` (hosts檔要有權限才能更改)
+* 到 Windows 本機 `C:\Windows\System32\drivers\etc` 裡修改 hosts 檔，手動指定ip 的方式加上 `192.168.56.101 www.nqutest.com` ( hosts檔要有權限才能更改 )
 * 到 Chrome 搜尋 https://www.nqutest.com/hi.html 會出現 "你的連線不是私人連線" -> 進階-> 繼續前往
 ![](Image/SSL/hi.html-2.PNG)
-* 可以看憑證是否設定成功
+
+* 可以看憑證是否設定成功（在詳細資料中查看設定檔是否正確）
 ![](Image/SSL/憑證.PNG)
 ![](Image/SSL/憑證2.PNG)
 
+* 在憑證「詳細資料」設定「複製到檔案」開啟「憑證匯出精靈」視窗，並點選下一步
+![](Image/SSL/憑證匯出精靈.PNG)
 
+* 在「匯出檔案格式」視窗中選取「DER 編碼二位元 X.509」，並點選下一步
+![](Image/SSL/匯出精靈2.PNG)
 
-
-
-
-
-
-
-
-
-
-
-
+* 接下來點擊「瀏覽」，以選取用來儲存 .cer 檔案的位置，並點選下一步
+* 點擊「完成」
 
 ---
 參考資料：
 * [CentOS 7 自建 SSL 憑證](https://www.brilliantcode.net/343/centos-7-create-own-ssl-certificates/)
-* []()
-* []()
-* []()
