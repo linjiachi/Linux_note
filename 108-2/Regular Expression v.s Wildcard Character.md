@@ -1,3 +1,15 @@
+* [正規表示法（正則表達式） v.s. 萬用字元（通配符）](https://github.com/linjiachi/Linux_note/blob/master/108-2/Regular%20Expression%20v.s%20Wildcard%20Character.md#%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%A4%BA%E6%B3%95%E6%AD%A3%E5%89%87%E8%A1%A8%E9%81%94%E5%BC%8F-vs-%E8%90%AC%E7%94%A8%E5%AD%97%E5%85%83%E9%80%9A%E9%85%8D%E7%AC%A6)
+    - [正規表示法（正則表達式）](https://github.com/linjiachi/Linux_note/blob/master/108-2/Regular%20Expression%20v.s%20Wildcard%20Character.md#%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%A4%BA%E6%B3%95%E6%AD%A3%E5%89%87%E8%A1%A8%E9%81%94%E5%BC%8F)
+        - [常見的正則表達式特殊字元](https://github.com/linjiachi/Linux_note/blob/master/108-2/Regular%20Expression%20v.s%20Wildcard%20Character.md#%E5%B8%B8%E8%A6%8B%E7%9A%84%E6%AD%A3%E5%89%87%E8%A1%A8%E9%81%94%E5%BC%8F%E7%89%B9%E6%AE%8A%E5%AD%97%E5%85%83)
+        - [正則表達式特殊匹配模式](https://github.com/linjiachi/Linux_note/blob/master/108-2/Regular%20Expression%20v.s%20Wildcard%20Character.md#%E6%AD%A3%E5%89%87%E8%A1%A8%E9%81%94%E5%BC%8F%E7%89%B9%E6%AE%8A%E5%8C%B9%E9%85%8D%E6%A8%A1%E5%BC%8F)
+        - [範例 - `grep`](https://github.com/linjiachi/Linux_note/blob/master/108-2/Regular%20Expression%20v.s%20Wildcard%20Character.md#%E7%AF%84%E4%BE%8B---grep)
+    - [萬用字元（通配符）](https://github.com/linjiachi/Linux_note/blob/master/108-2/Regular%20Expression%20v.s%20Wildcard%20Character.md#%E8%90%AC%E7%94%A8%E5%AD%97%E5%85%83%E9%80%9A%E9%85%8D%E7%AC%A6)
+        - [常見的萬用字元](https://github.com/linjiachi/Linux_note/blob/master/108-2/Regular%20Expression%20v.s%20Wildcard%20Character.md#%E5%B8%B8%E8%A6%8B%E7%9A%84%E8%90%AC%E7%94%A8%E5%AD%97%E5%85%83)
+        - [範例 - `ls`](https://github.com/linjiachi/Linux_note/blob/master/108-2/Regular%20Expression%20v.s%20Wildcard%20Character.md#%E7%AF%84%E4%BE%8B---ls)
+        - [ls 腳本](https://github.com/linjiachi/Linux_note/blob/master/108-2/Regular%20Expression%20v.s%20Wildcard%20Character.md#ls-%E8%85%B3%E6%9C%AC-test1)
+    - [補充：Linux 命令列中 EOF 用法](https://github.com/linjiachi/Linux_note/blob/master/108-2/Regular%20Expression%20v.s%20Wildcard%20Character.md#%E8%A3%9C%E5%85%85linux-%E5%91%BD%E4%BB%A4%E5%88%97%E4%B8%AD-eof-%E7%94%A8%E6%B3%95)
+
+---
 # 正規表示法（正則表達式） v.s. 萬用字元（通配符）
 * 正規表示法：基本上是用來搜尋檔案的內文或標準輸入
 * 萬用字元：基本上給系統命令使用，常使用於搜尋檔案的名稱
@@ -172,7 +184,7 @@ a  b
 -rw-r--r-- 1 root root 0 Jun 16 22:35 b
 ```
 
-## ls 腳本 Test1
+## ls 腳本
 1. 建立一個腳本：`vim lsdir.sh`
 * `IFS`：用來控制換行
 ```sh
@@ -290,4 +302,4 @@ dddd
 - [linux通配符和正则表达式](https://blog.51cto.com/qibingtuan/1970593)
 - [第十一章、正規表示法與文件格式化處理](http://linux.vbird.org/linux_basic/0330regularex.php)
 - [林柏億學長的筆記](https://github.com/istar0me/linux-note/blob/107-2/Wildcard%20vs.%20Regular%20Expression.md)
-- []()
+- [蘇家禹學長的筆記](https://github.com/ChiaYuSu/linux107b/blob/master/Week%203.md)
