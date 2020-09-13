@@ -22,6 +22,21 @@
         - [`user`：創建使用者]()
         - [`group`：創建群組]()
 * [ansible-playbook - ansible 的腳本檔]()
+  - [範例一：Hello World]()
+  - [範例二：自動產生網頁]()
+  - [範例三：複製更改過的配置檔，要增加 `notify`、`handlers`]()
+  - [範例四：LINE Notify]()
+  - [範例五：`tags` 標籤，執行某一項工作]()
+  - [範例六：`Setup` 模組可以看系統配置資訊]()
+  - [範例七：parameter 透過 `{{}}` 包著]()
+  - [範例八：如果要安裝兩個一樣的 package，可以取不同名字]()
+  - [範例九：更改 hostname]()
+  - [範例十：如果劇本設定和手動設定，手動>劇本]()
+  - [範例十一：`fqdn`：`Setup` 模組中的變數，完整的網域名字]()
+  - [範例十二：`vars_files` 引入腳本來傳遞變數]()
+  - [範例十三：自定義網頁伺服器]()
+  - [範例十四：在 playbook 設定條件 `when`]()
+  - [範例十五：`with_items` 一次執行多件事]()
 ---
 # 自動化管理
 * 常見的自動化管理工具有ansible、puppet、saltstack
@@ -733,7 +748,7 @@ ansible-playbook 1.yml
 ```sh
 curl 192.168.56.102/hi.html
 ```
-## 範例三：複製更改過的配置檔，要增加 notify、handlers
+## 範例三：複製更改過的配置檔，要增加 `notify`、`handlers`
 * 由於 ansible 不論執行一次或多次結果都相同，會導致儘管修改了 httpd 的 Port 後，Port 一樣是 80
 * 解決方法是增加 notify、handlers
 1. 到 /etc/httpd/conf 下更改 httpd.conf 檔
@@ -802,7 +817,7 @@ curl https://notify-api.line.me/api/notify -H "Authorization: Bearer ${TOKEN}" -
 * 執行結果： \
 ![](Image/Ansible/line.PNG)
 
-## 範例五：tags 標籤，執行某一項工作 
+## 範例五：`tags` 標籤，執行某一項工作 
 1. 新建一個腳本 `vim httpd.yml`
 ```yml
 ---
@@ -850,7 +865,7 @@ files/
 ansible-playbook -t hi httpd.yml
 ansible-playbook -t hi,service httpd.yml    # 有多項 tags 可以用逗號隔開
 ```
-## 範例六：Setup 模組可以看系統配置資訊
+## 範例六：`Setup` 模組可以看系統配置資訊
 ```sh
 [root@vm1 user]# ansible app1 -m setup | grep hostname
         "ansible_hostname": "vm2",
@@ -919,7 +934,7 @@ PLAY RECAP *********************************************************************
     # 用來改變主機的名稱
 ```
 3. 執行指令：`ansible-playbook test1.yml`
-## 範例十：
+## 範例十：如果劇本設定和手動設定，手動>劇本
 1. 到 `/etc/ansible/hosts` 下增加 `[myapp:vars]`
 ```sh
 [myapp]
@@ -963,10 +978,10 @@ PLAY RECAP *********************************************************************
 192.168.56.103             : ok=2    changed=1    unreachable=0    failed=0
 ```
 > * 如果手動設定 `nodename=test domainname=test.com`，與劇本中設定的 `[myapp:vars]`，手動 > 劇本，故會執行手動的設定
-## 範例十一：`fqdn`：`setup` 模組中的變數，完整的網域名字
 * `ansible myapp -m setup -a "filter=ansible_fqdn"`
   - `filter`：搜尋
   - `fqdn`：`setup` 模組中的變數，完整的網域名字，可以識別主機
+## 範例十一：`fqdn`：`Setup` 模組中的變數，完整的網域名字
 1. 新建一個腳本 `vim test3.yml`
 ```yml
 ---
@@ -1037,8 +1052,96 @@ Listen {{ http_port }}
 ```sh
 netstat -tunlp | grep httpd
 ```
-## 範例十四：
-## 範例十五：
+## 範例十四：在 playbook 設定條件 `when`
+* 讓虛擬機(vm3:192.168.56.103)關機
+1. 新建一個腳本 `vim test6.yml`
+```yml
+- hosts: myapp
+  remote_user: root
+  tasks:
+    - name: shutdown the computer
+      command: /sbin/shutdown -h now
+      when: ansible_fqdn=="vm3"
+```
+2. 執行指令：`ansible-playbook test6.yml`
+```sh
+[root@vm1 user]# ansible-playbook test6.yml
+
+PLAY [myapp] *******************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.56.102]
+ok: [192.168.56.101]
+fatal: [192.168.56.103]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 192.168.56.103 port 22: Connection timed out\r\n", "unreachable": true}
+
+TASK [shutdown the computer] ***************************************************
+skipping: [192.168.56.101]
+fatal: [192.168.56.102]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Shared connection to 192.168.56.102 closed.\r\n", "unreachable": true}
+        to retry, use: --limit @/home/user/test6.retry
+
+PLAY RECAP *********************************************************************
+192.168.56.101             : ok=1    changed=0    unreachable=0    failed=0
+192.168.56.102             : ok=1    changed=0    unreachable=1    failed=0
+192.168.56.103             : ok=0    changed=0    unreachable=1    failed=0
+```
+## 範例十五：`with_items` 一次執行多件事
+* 執行變數使用 `item`，`with_items` 一次執行多件事
+* 由於 `htop`、`sl` 是第三方套件，故 vm2(192.168.56.102)、vm3(192.168.56.103) 需先執行
+```sh
+yum install epel-release
+```
+
+1. 新建一個腳本 `vim test7.yml`
+```yml
+- hosts: app1
+  remote_user: root
+  tasks:
+    - name: create some files
+      file: name=/data/{{ item }} state=touch
+      with_items:
+        - file1
+        - file2
+        - file3
+    - name: install some packages
+      yum: name={{ item }}
+      with_items: 
+        -  htop
+        -  sl
+```
+2. 執行指令：`ansible-playbook test7.yml`
+```sh
+[root@vm1 user]# ansible-playbook test7.yml
+
+PLAY [app2] ********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.56.103]
+
+TASK [create some files] *******************************************************
+changed: [192.168.56.103] => (item=file1)
+changed: [192.168.56.103] => (item=file2)
+changed: [192.168.56.103] => (item=file3)
+
+TASK [install some packages] ***************************************************
+changed: [192.168.56.103] => (item=[u'htop', u'sl'])
+
+PLAY RECAP *********************************************************************
+192.168.56.103             : ok=3    changed=2    unreachable=0    failed=0
+```
+3. 執行結果：
+* 執行 `htop`：
+```sh
+[root@vm3 data]# htop
+```
+![](Image/Ansible/htop.PNG)
+
+* 執行 `sl`：
+```sh
+[root@vm3 data]# sl
+```
+![](Image/Ansible/sl1.PNG)
+![](Image/Ansible/sl2.PNG)
+
 ---
 參考資料：
 - [使用 Ansible 实现数据中心自动化管理](https://www.ibm.com/developerworks/cn/opensource/os-using-ansible-for-data-center-it-automation/index.html)
