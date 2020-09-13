@@ -37,6 +37,13 @@
   - [範例十三：自定義網頁伺服器](https://github.com/linjiachi/Linux_note/blob/master/108-2/Ansible.md#%E7%AF%84%E4%BE%8B%E5%8D%81%E4%B8%89%E8%87%AA%E5%AE%9A%E7%BE%A9%E7%B6%B2%E9%A0%81%E4%BC%BA%E6%9C%8D%E5%99%A8)
   - [範例十四：在 playbook 設定條件 `when`](https://github.com/linjiachi/Linux_note/blob/master/108-2/Ansible.md#%E7%AF%84%E4%BE%8B%E5%8D%81%E5%9B%9B%E5%9C%A8-playbook-%E8%A8%AD%E5%AE%9A%E6%A2%9D%E4%BB%B6-when)
   - [範例十五：`with_items` 一次執行多件事](https://github.com/linjiachi/Linux_note/blob/master/108-2/Ansible.md#%E7%AF%84%E4%BE%8B%E5%8D%81%E4%BA%94with_items-%E4%B8%80%E6%AC%A1%E5%9F%B7%E8%A1%8C%E5%A4%9A%E4%BB%B6%E4%BA%8B)
+* [Roles]()
+  - [Roles 是什麼?]()
+  - [如何使用 Roles]()
+    - [Galaxy 是什麼?]()
+    - [`ansible-galaxy` 是什麼?]()
+  - [環境介紹]()
+  - [範例一：可以從 [Galaxy](https://galaxy.ansible.com/) 中找尋套件 - Apache]()
 ---
 # 自動化管理
 * 常見的自動化管理工具有ansible、puppet、saltstack
@@ -1142,6 +1149,126 @@ PLAY RECAP *********************************************************************
 ![](Image/Ansible/sl1.PNG)
 ![](Image/Ansible/sl2.PNG)
 
+# Roles
+## Roles 是什麼?
+* Roles 可以降低 playbook 的複雜性，更可以增加 playbook 的可用性
+* 簡言之，Roles 就是把許多 playbook 整合在一起
+## 如何使用 Roles
+* 我們可以透過 Galaxy 和 `ansible-galaxy` 來使用 Roles
+###  Galaxy 是什麼?
+* [Ansible Galaxy](https://galaxy.ansible.com/) 是官方維護的網站，我們可以在上面取得社群成員所維護的 Roles
+### `ansible-galaxy` 是什麼?
+* `ansible-galaxy` 是管理 Roles 的指令，我們可以在 Terminal 上用它搜尋、安裝、移除 Roles 等，可以說它是 Ansible 世界的 pip
+## 環境介紹
+1. ansible 資料夾中，有 httpd_role.yml 檔和 roles 資料夾
+* roles 資料夾下的 httpd 資料夾有 tasks、templates 資料夾
+```sh
+[root@vm1 user]# tree ansible
+ansible
+├── httpd_role.yml
+└── roles
+    └── httpd
+        ├── tasks
+        │   ├── conf.yml
+        │   ├── install.yml
+        │   ├── main.yml
+        │   └── service.yml
+        └── templates
+            └── httpd.conf.j2
+
+4 directories, 6 files
+```
+2. 當執行 httpd_role.yml，會執行 httpd 資料夾裡的資料
+* 執行指令：`ansible-playbook httpd_role.yml`
+```sh
+[root@vm1 ansible]# cat httpd_role.yml
+- hosts: app1
+  remote_user: root
+  roles:
+  - role: httpd   # 會執行 httpd 資料夾裡的資料
+[root@vm1 httpd]# tree
+.
+└── tasks
+    ├── conf.yml
+    ├── install.yml
+    ├── main.yml    # 主要先執行
+    └── service.yml
+
+1 directories, 4 files
+```
+3. tasks 資料夾內的檔案內容
+  * conf.yml
+  ```yml
+  - name: copy conf
+  template: src=httpd.conf.j2 dest=/etc/httpd/conf/httpd.conf
+  ```
+  * install.yml
+  ```yml
+  - name: install package
+  yum: name=httpd
+  ```
+  * main.yml
+  ```yml
+  - include: install.yml
+  - include: conf.yml
+  - include: service.yml
+  ```
+  * service.yml
+  ```yml
+  - name: start service
+  service: name=httpd state=started
+  ```
+> 會先執行 main.yml，再按照內容順序執行
+## 範例一：可以從 [Galaxy](https://galaxy.ansible.com/) 中找尋套件 - Apache
+* [Galaxy apache](https://galaxy.ansible.com/geerlingguy/apache)
+1. 下載 apache：`ansible-galaxy install geerlingguy.apache`
+2. 檢視
+```sh
+[root@vm1 roles]# tree
+.
+├── geerlingguy.apache
+│   ├── defaults
+│   │   └── main.yml
+│   ├── handlers
+│   │   └── main.yml
+│   ├── LICENSE
+│   ├── meta
+│   │   └── main.yml
+│   ├── molecule
+│   │   └── default
+│   │       ├── molecule.yml
+│   │       ├── playbook.yml
+│   │       └── yaml-lint.yml
+│   ├── README.md
+│   ├── tasks
+│   │   ├── configure-Debian.yml
+│   │   ├── configure-RedHat.yml
+│   │   ├── configure-Solaris.yml
+│   │   ├── configure-Suse.yml
+│   │   ├── main.yml
+│   │   ├── setup-Debian.yml
+│   │   ├── setup-RedHat.yml
+│   │   ├── setup-Solaris.yml
+│   │   └── setup-Suse.yml
+│   ├── templates
+│   │   └── vhosts.conf.j2
+│   └── vars
+│       ├── AmazonLinux.yml
+│       ├── apache-22.yml
+│       ├── apache-24.yml
+│       ├── Debian.yml
+│       ├── RedHat.yml
+│       ├── Solaris.yml
+│       └── Suse.yml
+└── httpd
+    ├── tasks
+    │   ├── conf.yml
+    │   ├── install.yml
+    │   ├── main.yml
+    │   └── service.yml
+    └── templates
+        └── httpd.conf.j2
+```
 ---
 參考資料：
 - [使用 Ansible 实现数据中心自动化管理](https://www.ibm.com/developerworks/cn/opensource/os-using-ansible-for-data-center-it-automation/index.html)
