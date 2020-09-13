@@ -37,13 +37,13 @@
   - [範例十三：自定義網頁伺服器](https://github.com/linjiachi/Linux_note/blob/master/108-2/Ansible.md#%E7%AF%84%E4%BE%8B%E5%8D%81%E4%B8%89%E8%87%AA%E5%AE%9A%E7%BE%A9%E7%B6%B2%E9%A0%81%E4%BC%BA%E6%9C%8D%E5%99%A8)
   - [範例十四：在 playbook 設定條件 `when`](https://github.com/linjiachi/Linux_note/blob/master/108-2/Ansible.md#%E7%AF%84%E4%BE%8B%E5%8D%81%E5%9B%9B%E5%9C%A8-playbook-%E8%A8%AD%E5%AE%9A%E6%A2%9D%E4%BB%B6-when)
   - [範例十五：`with_items` 一次執行多件事](https://github.com/linjiachi/Linux_note/blob/master/108-2/Ansible.md#%E7%AF%84%E4%BE%8B%E5%8D%81%E4%BA%94with_items-%E4%B8%80%E6%AC%A1%E5%9F%B7%E8%A1%8C%E5%A4%9A%E4%BB%B6%E4%BA%8B)
-* [Roles]()
-  - [Roles 是什麼?]()
-  - [如何使用 Roles]()
-    - [Galaxy 是什麼?]()
-    - [`ansible-galaxy` 是什麼?]()
-  - [環境介紹]()
-  - [範例一：可以從 [Galaxy](https://galaxy.ansible.com/) 中找尋套件 - Apache]()
+* [Roles](https://github.com/linjiachi/Linux_note/blob/master/108-2/Ansible.md#roles)
+  - [Roles 是什麼?](https://github.com/linjiachi/Linux_note/blob/master/108-2/Ansible.md#roles-%E6%98%AF%E4%BB%80%E9%BA%BC)
+  - [如何使用 Roles](https://github.com/linjiachi/Linux_note/blob/master/108-2/Ansible.md#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-roles)
+    - [Galaxy 是什麼?](https://github.com/linjiachi/Linux_note/blob/master/108-2/Ansible.md#galaxy-%E6%98%AF%E4%BB%80%E9%BA%BC)
+    - [`ansible-galaxy` 是什麼?](https://github.com/linjiachi/Linux_note/blob/master/108-2/Ansible.md#ansible-galaxy-%E6%98%AF%E4%BB%80%E9%BA%BC)
+  - [環境介紹](https://github.com/linjiachi/Linux_note/blob/master/108-2/Ansible.md#%E7%92%B0%E5%A2%83%E4%BB%8B%E7%B4%B9)
+  - [範例一：可以從 [Galaxy](https://galaxy.ansible.com/) 中找尋套件 - Apache](https://github.com/linjiachi/Linux_note/blob/master/108-2/Ansible.md#%E7%AF%84%E4%BE%8B%E4%B8%80%E5%8F%AF%E4%BB%A5%E5%BE%9E-galaxy-%E4%B8%AD%E6%89%BE%E5%B0%8B%E5%A5%97%E4%BB%B6---apache)
 ---
 # 自動化管理
 * 常見的自動化管理工具有ansible、puppet、saltstack
