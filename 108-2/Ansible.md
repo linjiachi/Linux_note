@@ -1279,3 +1279,6 @@ ansible
 - [透過LINE接收其他網站服務通知](https://notify-bot.line.me/zh_TW/)
 - [YAML 簡介](http://www.wl-chuang.com/blog/2011/11/06/yaml-tutorial/)
 - [現代 IT 人一定要知道的 Ansible 自動化組態技巧](https://chusiang.gitbooks.io/automate-with-ansible/15.how-to-use-handlers-in-playbooks.html)
+- [Playbook 角色(Roles) 和 Include 语句](https://ansible-tran.readthedocs.io/en/latest/docs/playbooks_roles.html)
+- [Galaxy](https://galaxy.ansible.com/)
+- [Galaxy apache](https://galaxy.ansible.com/geerlingguy/apache)

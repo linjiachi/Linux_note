@@ -12,10 +12,10 @@
 * awk
 * sed
 ## 監控軟體
-* Zabbix
+* [Zabbix]()
 * 
 ## 自動化工具
-* Anaible：自動化部屬工具
+* [Anaible：自動化部屬工具]()
 * 
 ## 其他
 * [自建SSL憑證]()
