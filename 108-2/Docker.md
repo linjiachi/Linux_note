@@ -8,7 +8,9 @@
 ---
 # Docker
 ## Docker 介紹
-* 
+* 快速讓開發的應用程式上線運作
+* 是一個讓開發者與系統管理者能建立、轉送並執行應用程式的開發平台
+* 利用 LXC 與 aufs 等技術實作出的容器管理軟體
 ## Docker 使用
 * 到 [Dockerhub](https://hub.docker.com/) 申請一組帳號和密碼，如果將來在電腦裡有做好的 Image(映像檔/鏡像檔)，可以把映像檔/鏡像檔上傳自自己的 Dockerhub 上，公開給大家使用或者隱藏。
 ## Image 映象檔/鏡像檔 與 Container 容器
@@ -16,7 +18,7 @@
 2. 當 Image 開始運行，他會變成 Container，換句話說 Container 是用 Image 建立出來執行的實例
 3. 一個 Image 可以跑多個 Container，但 Image 的名字和本機 port 要改變
 ## Docker 容器三大特色
-1. 命名空間隔離
+1. 命名空間隔離 LXC
 2. aufs (advanced multi-layered unification filesystem)
     - 更動採用分層疊架的方式
     - 更動檔案的這個變動就成為一層
@@ -39,6 +41,11 @@
 * `docker rm -f $(docker ps -a -q)`：移除所有 容器Container
 * `docker run [容器ID或名稱]`：執行 Image 變成 容器Container
 * `docker run -it [容器ID或名稱] [指令]`：與 Image 互動，讓 Image 執行指令
+* `docker run -d --name myhttpd -p 8080:80 httpd`
+  - `-d`：在背景執行
+  - `--name`：執行容器的名字
+  - `-p`：port 號
+  - `8080:80`：host port:guest port
 * `docker inspect [容器ID或名稱]`：可以知道詳細的 容器Container 資訊
 * `docker images`：顯示目前鏡像檔
 * `docker rmi [鏡像TAG]`：移除 鏡像image
@@ -46,6 +53,7 @@
 * `docker info`：觀察正在用 docker 的資訊
 * `docker search centos`：查詢 docker 有關 centos 的資訊
 * `倉庫位置/owner/image_name:tag` ex. centos/mariadb-101-centos7
+* `docker logs`：
 # Docker 實例
 
 ---
