@@ -53,7 +53,6 @@
 * `docker info`：觀察正在用 docker 的資訊
 * `docker search centos`：查詢 docker 有關 centos 的資訊
 * `倉庫位置/owner/image_name:tag` ex. centos/mariadb-101-centos7
-* `docker logs`：
 # Docker 實例
 
 ---
