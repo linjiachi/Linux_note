@@ -24,3 +24,5 @@
         - [C](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W3-20200929.md#c)
         - [Python](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W3-20200929.md#python)
         - [Httpd](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W3-20200929.md#httpd)
+            1. [將虛擬機的資料夾映射到 docker 環境中](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W3-20200929.md#1%E5%B0%87%E8%99%9B%E6%93%AC%E6%A9%9F%E7%9A%84%E8%B3%87%E6%96%99%E5%A4%BE%E6%98%A0%E5%B0%84%E5%88%B0-docker-%E7%92%B0%E5%A2%83%E4%B8%AD)
+            2. [利用`docker cp`將虛擬機的資料夾映射到 docker 環境中](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W3-20200929.md#2%E5%88%A9%E7%94%A8docker-cp%E5%B0%87%E8%99%9B%E6%93%AC%E6%A9%9F%E7%9A%84%E8%B3%87%E6%96%99%E5%A4%BE%E6%98%A0%E5%B0%84%E5%88%B0-docker-%E7%92%B0%E5%A2%83%E4%B8%AD)
