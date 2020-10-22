@@ -24,3 +24,4 @@
     - [Test1 - 序列埠連接](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W4-20201007.md#test1---%E5%BA%8F%E5%88%97%E5%9F%A0%E9%80%A3%E6%8E%A5)
     - [Test2 - 乙太網路接口](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W4-20201007.md#test2---%E4%B9%99%E5%A4%AA%E7%B6%B2%E8%B7%AF%E6%8E%A5%E5%8F%A3)
     - [Test3 - 整合實作](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W4-20201007.md#test3---%E6%95%B4%E5%90%88%E5%AF%A6%E4%BD%9C)
+    - [Test4 - 內定路由](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W4-20201007.md#test4---%E5%85%A7%E5%AE%9A%E8%B7%AF%E7%94%B1)
