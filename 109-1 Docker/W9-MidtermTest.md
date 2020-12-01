@@ -28,6 +28,7 @@ sh install.sh
 ![](Image/W9-MidtermTest/login.PNG)
 
 ![](Image/W9-MidtermTest/project.jpg)
+
 ### 上傳鏡像檔至 Harbor
 1. 重新將鏡像檔命名
 ```sh
@@ -102,9 +103,20 @@ cd htdocs/
 ```sh
 docker network create -d bridge mynet
 ```
-2. 啟動兩個
+2. 啟動兩個虛擬機 vm1、vm2
+```sh
+docker run -d --net=mynet --name vm1 training/postgres
+docker run -d --net=mynet --name vm2 training/postgres
+```
+3. 進入 vm1 容器並 ping vm2 
+```sh
+docker exec -it vm1 bash
+```
+4. 執行結果
+
+![](Image/W9-MidtermTest/vm1pingvm2.png)
 
 ## Test4
 ### 題目：使用 Docker-compose (flask、redis) 上傳至 gitlab 上，並 deplay 在另一台機器上
 
-參考：[]()
+參考：[Docker-compose 實作](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W8-20201103.md#docker-compose-%E5%AF%A6%E4%BD%9C)
