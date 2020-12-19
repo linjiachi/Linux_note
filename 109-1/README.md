@@ -7,6 +7,7 @@
     - [開啟 Wireshark](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W1-20200916.md#%E9%96%8B%E5%95%9F-wireshark)
     - [補充：新增新的 Template](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W1-20200916.md#%E8%A3%9C%E5%85%85%E6%96%B0%E5%A2%9E%E6%96%B0%E7%9A%84-template)
     - [保存設置](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W4-20201007.md#%E4%BF%9D%E5%AD%98%E8%A8%AD%E7%BD%AE)
+# Cisco
 * [Cisco](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W2-20200923.md#cisco)
     - [Cisco Router Mode](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W2-20200923.md#cisco-router-mode)
     - [中間人攻擊](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W2-20200923.md#%E4%B8%AD%E9%96%93%E4%BA%BA%E6%94%BB%E6%93%8A)
@@ -28,6 +29,8 @@
 * [IPv6 設定](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W5-20201014.md#ipv6)
     - [手動設定IP](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W5-20201014.md#%E6%89%8B%E5%8B%95%E8%A8%AD%E5%AE%9Aip)
     - [自動取得 IPv6](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W5-20201014.md#%E8%87%AA%E5%8B%95%E5%8F%96%E5%BE%97-ipv6)
+
+## RIP (Routing Information Protocol)
 * [動態路由](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W5-20201014.md#%E5%8B%95%E6%85%8B%E8%B7%AF%E7%94%B1)
     - [RIP 實作 1](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W5-20201014.md#rip-%E5%AF%A6%E4%BD%9C-1)
     - [RIP 實作 2](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W5-20201014.md#rip-%E5%AF%A6%E4%BD%9C-2)
@@ -38,6 +41,8 @@
     - [Passive Interface](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W6-20201021.md#passive-interface)
     - [Default-information Originate](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W6-20201021.md#default-information-originate)
       - [延伸](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W6-20201021.md#%E5%BB%B6%E4%BC%B8)
+
+## EIGRP (Enhanced Interior Gateway Routing Protocol)
 * [EIGRP (Enhanced Interior Gateway Routing Protocol)](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W8-20201104.md#eigrp-enhanced-interior-gateway-routing-protocol)
     - [特色](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W8-20201104.md#%E7%89%B9%E8%89%B2)
     - [封包類型](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W8-20201104.md#%E5%B0%81%E5%8C%85%E9%A1%9E%E5%9E%8B)
@@ -54,6 +59,8 @@
     - [Variance](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W10-20201118.md#variance)
     - [Summarization](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W10-20201118.md#summarization)
         - [Test1](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W10-20201118.md#test1)
+
+## ACL (Access Control List)
 * [ACL (Access Control List) - 存取控制清單](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W10-20201118.md#acl-access-control-list---%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6%E6%B8%85%E5%96%AE)
     - [ACL 運作模式](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W10-20201118.md#acl-%E9%81%8B%E4%BD%9C%E6%A8%A1%E5%BC%8F)
     - [ACL 從嚴或從寬條件](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W10-20201118.md#acl-%E5%BE%9E%E5%9A%B4%E6%88%96%E5%BE%9E%E5%AF%AC%E6%A2%9D%E4%BB%B6)
@@ -64,3 +71,29 @@
         - [Extended ACL](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W11-20201125.md#test2---extended-acl)
         - [Telnet](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W11-20201125.md#test3---telnet)
         - [Named ACL](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W11-20201125.md#test4---named-acl)
+
+## Routersploit 路由器漏洞檢測
+* [Routersploit]()
+  - [Test1 - 掃描 router 設備漏洞/弱點]()
+    - [環境設定]()
+    - [測試]()
+  - [Test2 - 使用 Python 控制 router]()
+
+## VRF (Virtual routing and forwarding)
+* [VRF (Virtual routing and forwarding) - 虛擬路由和轉發]()
+    - [網路虛擬化：VLAN、VRF]()
+    - [VRF 實驗]()
+      - [環境設定]()
+      - [測試]()
+
+## NAT (Network Address Translation)
+* [NAT (Network Address Translation) - 網路位置轉換]()
+  - [Dynamic NAT (DAT)]()
+    - [環境設定]()
+    - [測試]()
+  - [Port NAT (PAT)]()
+    - [環境設定]()
+    - [測試]()
+  - [Static NAT]()
+    - [環境設定]()
+    - [測試]()

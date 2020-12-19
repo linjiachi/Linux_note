@@ -1,7 +1,7 @@
 # MidtermTest
 ## Test1
 **題目：static routing，PC1 ping PC2，走 R1、R2 這條；PC2 ping PC1，走 R2、R4、R3、R1 這條**
-* 架構圖
+* 拓樸圖
 
 ![](Image/W9-20201111/Test1.PNG)
 
@@ -82,7 +82,7 @@ R3(config)#ip route 192.168.1.0 255.255.255.0 e0/1 13.1.1.1
 
 ## Test2
 **題目：讓 h1、h2 透過 DHCP server 取得 IP 和相關資訊，h1 可 ping h2**
-* 架構圖
+* 拓樸圖
 
 ![](Image/W9-20201111/Test2.PNG)
 
@@ -151,7 +151,7 @@ R2(config)#ip route 192.168.1.0 255.255.255.0 e0/0 12.1.1.1
 
 ## Test3
 **題目：使用 RIP 和 EIGRP 讓 192.168.1.1 可 ping 192.168.2.1**
-* 架構圖
+* 拓樸圖
 
 ![](Image/W9-20201111/Test3.PNG)
 
@@ -211,7 +211,7 @@ R3(config-router)#auto-summary
 
 ## Test4
 **題目：使用浮動路由，讓 R1 和 R2 斷線後，h1->R1->R3->R2->h2**
-* 架構圖
+* 拓樸圖
 
 ![](Image/W9-20201111/Test4.PNG)
 
