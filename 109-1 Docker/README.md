@@ -70,4 +70,10 @@
     - [使用 docker swarm 啟動 Web 服務](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W10-20201117.md#%E4%BD%BF%E7%94%A8-docker-swarm-%E5%95%9F%E5%8B%95-web-%E6%9C%8D%E5%8B%99)
     - [補充：維護](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W10-20201117.md#%E8%A3%9C%E5%85%85%E7%B6%AD%E8%AD%B7)
 
+    - [特色與功能介紹](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W11-20201124.md#%E7%89%B9%E8%89%B2%E8%88%87%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%B4%B9)
+    - [Service](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W11-20201124.md#service)
+        - [Mode - Replicated v.s Global](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W11-20201124.md#mode---replicated-vs-global)
+    - [Docker Swarm 實作](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W11-20201124.md#docker-swarm-%E5%AF%A6%E4%BD%9C)
+        - [Rolling update](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W11-20201124.md#rolling-update)
+        - [Label](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W11-20201124.md#label)
 # Kubernetes (K8S)
