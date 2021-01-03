@@ -14,7 +14,7 @@
     - [Docker 指令](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W2-20200922.md#docker-%E6%8C%87%E4%BB%A4)
     - [補充：遇到無法安裝 Centos7 Docker](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W2-20200922.md#%E8%A3%9C%E5%85%85%E9%81%87%E5%88%B0%E7%84%A1%E6%B3%95%E5%AE%89%E8%A3%9D-centos7-docker)
     - [安裝 Docker-compose](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W2-20200922.md#%E5%AE%89%E8%A3%9D-docker-compose)
-- [Docker 實作](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W3-20200929.md#docker-%E5%AF%A6%E4%BD%9C)
+* [Docker 實作](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W3-20200929.md#docker-%E5%AF%A6%E4%BD%9C)
     - [busybox](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W3-20200929.md#busybox)
         - [安裝 busybox](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W3-20200929.md#%E5%AE%89%E8%A3%9D-busybox)
         - [一次性指令](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W3-20200929.md#%E4%B8%80%E6%AC%A1%E6%80%A7%E6%8C%87%E4%BB%A4)
@@ -29,7 +29,9 @@
     - [Harbor 私有倉儲](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W4-20201006.md#harbor-%E7%A7%81%E6%9C%89%E5%80%89%E5%84%B2)
         - [安裝 docker harbor](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W4-20201006.md#%E5%AE%89%E8%A3%9D-docker-harbor)
         - [上傳鏡像檔至 Harbor](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W4-20201006.md#%E4%B8%8A%E5%82%B3%E9%8F%A1%E5%83%8F%E6%AA%94%E8%87%B3-harbor)
-- [Docker Network](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W4-20201006.md#docker-network)
+
+## Docker Network 
+* [Docker Network](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W4-20201006.md#docker-network)
     - [none network：在啟動 docker 的時候，不要開啟任何網路](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W4-20201006.md#none-network%E5%9C%A8%E5%95%9F%E5%8B%95-docker-%E7%9A%84%E6%99%82%E5%80%99%E4%B8%8D%E8%A6%81%E9%96%8B%E5%95%9F%E4%BB%BB%E4%BD%95%E7%B6%B2%E8%B7%AF)
     - [host network：docker 的網路和 host 網路一樣](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W4-20201006.md#host-networkdocker-%E7%9A%84%E7%B6%B2%E8%B7%AF%E5%92%8C-host-%E7%B6%B2%E8%B7%AF%E4%B8%80%E6%A8%A3)
     - [bridge network：橋接網路，預設的網路 (docker 0)](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W4-20201006.md#bridge-network%E6%A9%8B%E6%8E%A5%E7%B6%B2%E8%B7%AF%E9%A0%90%E8%A8%AD%E7%9A%84%E7%B6%B2%E8%B7%AF-docker-0)
@@ -40,6 +42,8 @@
         - [B. 沒有名稱的 Data Volume](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W5-20201013.md#b-%E6%B2%92%E6%9C%89%E5%90%8D%E7%A8%B1%E7%9A%84-data-volume)
         - [C. 有名稱的 Data Volume](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W5-20201013.md#c-%E6%9C%89%E5%90%8D%E7%A8%B1%E7%9A%84-data-volume)
 * [Portainer - 圖形化介面管理 docker](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W5-20201013.md#portainer---%E5%9C%96%E5%BD%A2%E5%8C%96%E4%BB%8B%E9%9D%A2%E7%AE%A1%E7%90%86-docker)
+
+## Dockerfile
 * [Dockerfile](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W5-20201013.md#dockerfile)
     - [Dockerfile components](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W5-20201013.md#dockerfile-components)
     - [Dockerfile example](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W5-20201013.md#dockerfile-example)
@@ -55,12 +59,14 @@
       - [將 iris 專案上傳至 GitLab](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W7-20201027.md#%E5%B0%87-iris-%E5%B0%88%E6%A1%88%E4%B8%8A%E5%82%B3%E8%87%B3-gitlab)
       - [建立 gitlab-runner](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W7-20201027.md#%E5%BB%BA%E7%AB%8B-gitlab-runner)
       - [新建一個專案 testgo](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W8-20201103.md#%E6%96%B0%E5%BB%BA%E4%B8%80%E5%80%8B%E5%B0%88%E6%A1%88-testgo)
+
+## Docker-compose
 * [Docker-compose](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W8-20201103.md#docker-compose)
     - [Docker-compose 簡介](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W8-20201103.md#docker-compose-%E7%B0%A1%E4%BB%8B)
     - [Docker-compose 實作](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W8-20201103.md#docker-compose-%E5%AF%A6%E4%BD%9C)
     - [Test1 - web project](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W8-20201103.md#test1---web-project)
 
-# Docker Swarm
+## Docker Swarm
 * [Docker Swarm](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W10-20201117.md#docker-swarm)
     - [基本設定](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W10-20201117.md#%E5%9F%BA%E6%9C%AC%E8%A8%AD%E5%AE%9A)
     - [主要節點設定](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W10-20201117.md#%E4%B8%BB%E8%A6%81%E7%AF%80%E9%BB%9E%E8%A8%AD%E5%AE%9A)
