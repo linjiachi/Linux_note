@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd2
+  labels:
+    app: httpd2
+spec:
+  selector:
+    matchLabels:
+      app: httpd2
+  replicas: 2	
+  template:
+    metadata:
+      labels:
+        app: httpd2
+    spec:
+      containers:
+      - name: httpd2
+        image: httpd:2.4.46
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: httpd2
+spec:
+  selector:
+    app: httpd2
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
