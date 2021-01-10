@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: {{.Values.label}}
+  name: {{.Release.Name}}-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{.Values.label}}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: {{.Values.label}}
+    spec:
+      containers:
+      - image: {{.Values.img}}:{{.Values.tag}}
+        name: httpd
+        resources: {}
+status: {}
