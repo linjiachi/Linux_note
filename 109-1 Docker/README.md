@@ -135,3 +135,17 @@
       - [安裝 chart](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W16-20201229.md#%E5%AE%89%E8%A3%9D-chart)
       - [創造 chart](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W16-20201229.md#%E5%89%B5%E9%80%A0-chart)
       - [實現 yaml 高效復用](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W16-20201229.md#%E5%AF%A6%E7%8F%BE-yaml-%E9%AB%98%E6%95%88%E5%BE%A9%E7%94%A8)
+
+## K8S 應用部署
+* [K8S 應用部署](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W17-20210105.md#k8s-%E6%87%89%E7%94%A8%E9%83%A8%E7%BD%B2)
+    - [容器交代流程](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W17-20210105.md#%E5%AE%B9%E5%99%A8%E4%BA%A4%E4%BB%A3%E6%B5%81%E7%A8%8B)
+    - [K8S 部署項目流程](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W17-20210105.md#k8s-%E9%83%A8%E7%BD%B2%E9%A0%85%E7%9B%AE%E6%B5%81%E7%A8%8B)
+    - [實作 Dockerfile + Flask](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W17-20210105.md#%E5%AF%A6%E4%BD%9C-dockerfile--flask)
+        - [環境準備](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W17-20210105.md#%E7%92%B0%E5%A2%83%E6%BA%96%E5%82%99)
+            - [推送至 DockerHub](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W17-20210105.md#%E6%8E%A8%E9%80%81%E8%87%B3-dockerhub)
+            - [推送到鏡像倉庫 docker harbor](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W17-20210105.md#%E6%8E%A8%E9%80%81%E5%88%B0%E9%8F%A1%E5%83%8F%E5%80%89%E5%BA%AB-docker-harbor)
+            - [補充：docker login fail](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W17-20210105.md#%E8%A3%9C%E5%85%85docker-login-fail)
+
+## Prometheus
+* [Prometheus](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W17-20210105.md#prometheus)
+    - [Prometheus + Grafana 安裝](https://github.com/linjiachi/Linux_note/blob/master/109-1%20Docker/W17-20210105.md#prometheus--grafana-%E5%AE%89%E8%A3%9D)
