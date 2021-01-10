@@ -140,3 +140,32 @@
 * [VRF 練習](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W15-20201223.md#vrf-%E7%B7%B4%E7%BF%92)
     - [環境設置](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W15-20201223.md#%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE-2)
     - [測試](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W15-20201223.md#%E6%B8%AC%E8%A9%A6-2)
+
+
+## Spanning-Tree
+* [Spanning-Tree](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W16-20201230.md#spanning-tree)
+    - [Forwarding and Address Learning Algorithm](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W16-20201230.md#forwarding-and-address-learning-algorithm)
+    - [Spanning Tree Algorithm](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W16-20201230.md#spanning-tree-algorithm)
+    - [Test - SpanningTree](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W16-20201230.md#test---spanningtree)
+
+## EtherChannel (PAgP and LACP)
+* [EtherChannel (PAgP and LACP) - 乙太通道](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W16-20201230.md#etherchannel-pagp-and-lacp---%E4%B9%99%E5%A4%AA%E9%80%9A%E9%81%93)
+    - [EtherChannel 優點](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W16-20201230.md#etherchannel-%E5%84%AA%E9%BB%9E)
+    - [Test - 建立 Etherchannel](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W16-20201230.md#test---%E5%BB%BA%E7%AB%8B-etherchannel)
+
+## AAA (Authentication Authorization Accounting)
+* [Authentication Authorization Accounting (AAA) - 認證授權與計費](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W16-20201230.md#authentication-authorization-accounting-aaa---%E8%AA%8D%E8%AD%89%E6%8E%88%E6%AC%8A%E8%88%87%E8%A8%88%E8%B2%BB)
+    - [網絡設備連接 TACACS+](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W16-20201230.md#%E7%B6%B2%E7%B5%A1%E8%A8%AD%E5%82%99%E9%80%A3%E6%8E%A5-tacacs)
+        - [環境設置](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W16-20201230.md#%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE)
+        - [測試](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W16-20201230.md#%E6%B8%AC%E8%A9%A6)
+
+## GRE (Generic Routing Encapsulation)
+* [GRE (Generic Routing Encapsulation) - 通用路由封裝](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W17-20210106.md#gre-generic-routing-encapsulation---%E9%80%9A%E7%94%A8%E8%B7%AF%E7%94%B1%E5%B0%81%E8%A3%9D)
+    - [Hub-to-spoke Topology](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W17-20210106.md#hub-to-spoke-topology)
+        - [環境設置](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W17-20210106.md#%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE)
+        - [驗證]()
+
+## IPSEC (Internet Protocol Security)
+* [IPSEC (Internet Protocol Security) - 網際網路安全協定](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W17-20210106.md#ipsec-internet-protocol-security---%E7%B6%B2%E9%9A%9B%E7%B6%B2%E8%B7%AF%E5%AE%89%E5%85%A8%E5%8D%94%E5%AE%9A)
+    - [環境設置](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W17-20210106.md#%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE-1)
+    - [測試](https://github.com/linjiachi/Linux_note/blob/master/109-1/cisco/W17-20210106.md#%E6%B8%AC%E8%A9%A6)
