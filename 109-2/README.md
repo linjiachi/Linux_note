@@ -20,11 +20,6 @@
   - [Gnuplot - 繪出兩筆數據](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210315.md#gnuplot---%E7%B9%AA%E5%87%BA%E5%85%A9%E7%AD%86%E6%95%B8%E6%93%9A)
     - [Ubuntu](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210315.md#ubuntu)
     - [Mininet](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210315.md#mininet-1)
-  - [使用腳本建立 Mininet](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210315.md#%E4%BD%BF%E7%94%A8%E8%85%B3%E6%9C%AC%E5%BB%BA%E7%AB%8B-mininet)
-    - [簡易建立 h1、h2](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210315.md#%E7%B0%A1%E6%98%93%E5%BB%BA%E7%AB%8B-h1h2)
-    - [建立 h1、h2、r (router)](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210315.md#%E5%BB%BA%E7%AB%8B-h1h2r-router)
-    - [建立 h1、h2、r 並設定好網路](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210315.md#%E5%BB%BA%E7%AB%8B-h1h2r-%E4%B8%A6%E8%A8%AD%E5%AE%9A%E5%A5%BD%E7%B6%B2%E8%B7%AF)
-    - [Test - 讓 h1 可以 ping h2](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210315.md#test---%E8%AE%93-h1-%E5%8F%AF%E4%BB%A5-ping-h2)
 
 # Iperf
 * [Iperf](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210308.md#iperf)
@@ -35,3 +30,19 @@
   - [圖形化檢測 - gnuplot](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210308.md#%E5%9C%96%E5%BD%A2%E5%8C%96%E6%AA%A2%E6%B8%AC---gnuplot)
     - [Ubuntu](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210308.md#ubuntu)
     - [mininet](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210308.md#mininet-1)
+
+# 腳本建立 Mininet
+* [使用腳本建立 Mininet](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210315.md#%E4%BD%BF%E7%94%A8%E8%85%B3%E6%9C%AC%E5%BB%BA%E7%AB%8B-mininet)
+  - [簡易建立 h1、h2](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210315.md#%E7%B0%A1%E6%98%93%E5%BB%BA%E7%AB%8B-h1h2)
+  - [建立 h1、h2、r (router)](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210315.md#%E5%BB%BA%E7%AB%8B-h1h2r-router)
+  - [建立 h1、h2、r 並設定好網路](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210315.md#%E5%BB%BA%E7%AB%8B-h1h2r-%E4%B8%A6%E8%A8%AD%E5%AE%9A%E5%A5%BD%E7%B6%B2%E8%B7%AF)
+  - [Test - 讓 h1 可以 ping h2](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210315.md#test---%E8%AE%93-h1-%E5%8F%AF%E4%BB%A5-ping-h2)
+
+* [NAT 轉換](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210322.md#nat-%E8%BD%89%E6%8F%9B)
+* [Bridge](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210322.md#bridge)
+  - [Test1 - 創建一個 Bridge 橋接器](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210322.md#test1---%E5%89%B5%E5%BB%BA%E4%B8%80%E5%80%8B-bridge-%E6%A9%8B%E6%8E%A5%E5%99%A8)
+  - [Test2 - 建立兩個 Bridge](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210322.md#test2---%E5%BB%BA%E7%AB%8B%E5%85%A9%E5%80%8B-bridge)
+  - [Test3 - 新增一個 router](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210322.md#test3---%E6%96%B0%E5%A2%9E%E4%B8%80%E5%80%8B-router)
+  - [Test4 - vlan](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210322.md#test4---vlan)
+* [補充 - `sed`](https://github.com/linjiachi/Linux_note/blob/master/109-2/20210322.md#%E8%A3%9C%E5%85%85---sed)
+
